@@ -1,6 +1,6 @@
 # Company
 
-##Tables
+## Tables
 
 **We have departments table**
 
