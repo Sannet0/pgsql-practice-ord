@@ -1,2 +1,2 @@
-# pgsql-practice-ord
-postgresql practice tables with answers
+# PostgreSQL practice
+Postgresql practice tables with databases and answers
