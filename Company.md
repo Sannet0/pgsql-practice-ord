@@ -2,7 +2,7 @@
 
 ## Tables
 
-**We have departments table**
+**Departments**
 
 * **id** - departments ID
 * **name** - name of department
@@ -12,7 +12,7 @@
 > name VARCHAR(100)
 > );
 
-**We have employees table**
+**Employees**
 
 * **id** - employees ID
 * **name** - employee name
@@ -31,6 +31,20 @@
 > );
 
 ## Data
+
+**Departments**
+
+> INSERT INTO departments ("name") 
+> VALUES ('first department'), 
+> ('second department'), 
+> ('third department'), 
+> ('fourth department'), 
+> ('fifth department'), 
+> ('sixth department'), 
+> ('seventh department'), 
+> ('eighth department'), 
+> ('ninth department'), 
+> ('tenth department');
 
 **Employees**
 
@@ -90,20 +104,6 @@
 > ('Kozlov', 'Andrey', 25478, 10, 46),
 > ('Nesterova', 'Miroslava', 27883, 10, 46),
 > ('Kuznetsov', 'Demid', 23574, 10, 46);
-
-**Departments**
-
-> INSERT INTO departments ("name") 
-> VALUES ('first department'), 
-> ('second department'), 
-> ('third department'), 
-> ('fourth department'), 
-> ('fifth department'), 
-> ('sixth department'), 
-> ('seventh department'), 
-> ('eighth department'), 
-> ('ninth department'), 
-> ('tenth department');
 
 ## Tasks
 
