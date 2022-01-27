@@ -88,7 +88,7 @@
 
 ## Tasks
 
- 1. Find the number of g letters in word Chargoggagoggmanchauggagoggchaubunagungamaugg
+ 1. Find the number of g letters in word Chargoggagoggmanchauggagoggchaubunagungamaugg*
  2. Select the city code, city name and population, where the city code is greater than the general city code by 2.
  3. Display the brand and color of the car - the firstname and lastname of the customer, for all customers who live in a city with a population of more than 1 million people.
  4. Display people who live in cities with a population greater than 1000000 if there are no people with the same name in the "customer" table.
@@ -97,6 +97,8 @@
  7. Display the mark of car and the number of cars not of this mark.
  8. Display how many cars of each color for BMW and LADA cars.
  9. Display the car brand - as well as how many cars of this brand are in the table, display records where the number of cars of this brand is more than 2, records should not be duplicated.
+
+> Chargoggagoggmanchauggagoggchaubunagungamaugg is the full original name of American Webster Lake in Massachusetts.
  
 ## Answers
 
