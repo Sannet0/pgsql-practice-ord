@@ -98,7 +98,7 @@
  8. Display how many cars of each color for BMW and LADA cars.
  9. Display the car brand - as well as how many cars of this brand are in the table, display records where the number of cars of this brand is more than 2, records should not be duplicated.
 
-> Chargoggagoggmanchauggagoggchaubunagungamaugg is the full original name of American Webster Lake in Massachusetts.
+> *Chargoggagoggmanchauggagoggchaubunagungamaugg is the full original name of American Webster Lake in Massachusetts.
  
 ## Answers
 
