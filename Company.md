@@ -8,8 +8,8 @@
 * **name** - name of department
 
 > CREATE TABLE departments (
-> id serial primary key, 
-> name varchar(100)
+> id SERIAL PRIMARY KEY, 
+> name VARCHAR(100)
 > );
 
 **We have employees table**
@@ -22,12 +22,12 @@
 * **chief_id** - employee chief ID
 
 > CREATE TABLE employees (
-> id serial primary key, 
-> name varchar(80), 
-> surname varchar(80), 
-> payment int, 
-> departments_id int references departments (id), 
-> chief_id int
+> id SERIAL PRIMARY KEY, 
+> name VARCHAR(80), 
+> surname VARCHAR(80), 
+> payment INT, 
+> departments_id INT REFERENCES departments (id), 
+> chief_id INT
 > );
 
 ## Data
