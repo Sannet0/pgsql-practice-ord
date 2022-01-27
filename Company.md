@@ -32,6 +32,8 @@
 
 ## Data
 
+**Employees**
+
 > INSERT INTO employees ("name", "surname", "payment", "departments_id", "chief_id") 
 > VALUES ('Demin', 'Victor', 40615, 1, NULL), 
 > ('Shcherbakova', 'Pauline', 50862, 2, NULL), 
@@ -88,6 +90,8 @@
 > ('Kozlov', 'Andrey', 25478, 10, 46),
 > ('Nesterova', 'Miroslava', 27883, 10, 46),
 > ('Kuznetsov', 'Demid', 23574, 10, 46);
+
+**Departments**
 
 > INSERT INTO departments ("name") 
 > VALUES ('first department'), 
