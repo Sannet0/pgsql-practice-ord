@@ -2,7 +2,7 @@
 
 ## Tables
 
-**We have groups of analysis**
+**Groups**
 
 * **gr_id** — groups ID;
 * **gr_name** — groups name;
@@ -14,7 +14,7 @@
 > gr_temp INT
 > );
 
-**We have analysis table**
+**Analysis**
 
 * **an_id** — analysis ID;
 * **an_name** — analysis name;
@@ -30,7 +30,7 @@
 > an_group INT REFERENCES groups (gr_id)
 > );
 
-**We have analysis orders table**
+**Orders**
 
 * **ord_id** — orders ID;
 * **ord_datetime** — orders date;
