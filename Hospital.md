@@ -2,6 +2,18 @@
 
 ## Tables
 
+**We have groups of analysis**
+
+* **gr_id** — groups ID;
+* **gr_name** — groups name;
+* **gr_temp** — groups storage temperature.
+
+> CREATE TABLE groups (
+> gr_id SERIAL PRIMARY KEY, 
+> gr_name VARCHAR(100), 
+> gr_temp INT
+> );
+
 **We have analysis table**
 
 * **an_id** — analysis ID;
@@ -11,23 +23,11 @@
 * **an_group** — analysis group.
 
 > CREATE TABLE analysis (
-> an_id serial primary key, 
-> an_name varchar(100), 
-> an_cost int, 
-> an_price int, 
-> an_group int references groups (gr_id)
-> );
-
-**We have groups of analysis**
-
-* **gr_id** — groups ID;
-* **gr_name** — groups name;
-* **gr_temp** — groups storage temperature.
-
-> CREATE TABLE groups (
-> gr_id serial primary key, 
-> gr_name varchar(100), 
-> gr_temp int
+> an_id SERIAL PRIMARY KEY, 
+> an_name VARCHAR(100), 
+> an_cost INT, 
+> an_price INT, 
+> an_group INT REFERENCES groups (gr_id)
 > );
 
 **We have analysis orders table**
@@ -37,9 +37,9 @@
 * **ord_an** — analysis ID.
 
 > CREATE TABLE orders (
-> ord_id serial primary key, 
-> ord_datetime date, 
-> ord_an int references analysis (an_id)
+> ord_id SERIAL PRIMARY KEY, 
+> ord_datetime DATE, 
+> ord_an INT REFERENCES analysis (an_id)
 > );
 
 ## Data
@@ -93,7 +93,7 @@
     > EXTRACT(year from orders.ord_datetime) AS "year", 
     > EXTRACT(month from orders.ord_datetime) AS "month", 
     > COUNT(analysis.an_price) AS "countw",
-    > COALESCE(sum(count(analysis.an_price)) OVER (PARTITION BY EXTRACT(year from orders.ord_datetime) ORDER BY EXTRACT(year from orders.ord_datetime), EXTRACT(month from orders.ord_datetime)
+    > COALESCE(SUM(count(analysis.an_price)) OVER (PARTITION BY EXTRACT(year from orders.ord_datetime) ORDER BY EXTRACT(year from orders.ord_datetime), EXTRACT(month from orders.ord_datetime)
     > rows between unbounded preceding and current row), 0) AS total 
     > FROM orders 
     > JOIN analysis ON orders.ord_an = analysis.an_id 
@@ -105,4 +105,4 @@
     > FROM orders 
     > JOIN analysis on orders.ord_an = analysis.an_id 
     > JOIN groups on groups.gr_id = analysis.an_group 
-    > WHERE orders.ord_datetime BETWEEN  make_date(2021, 12, 22) AND make_date(2021, 12, 22) + CAST(7 - EXTRACT(isodow from make_date(2021, 12, 22)) AS int);
+    > WHERE orders.ord_datetime BETWEEN  make_date(2021, 12, 22) AND make_date(2021, 12, 22) + CAST(7 - EXTRACT(isodow from make_date(2021, 12, 22)) AS INT);
